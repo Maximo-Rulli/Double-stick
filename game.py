@@ -8,7 +8,7 @@ from environment import S, A, MONEY, transition, LIFES
 # Create the main Tkinter root
 root = tk.Tk()
 root.title("Doble o nada!")
-root.geometry('500x300')
+root.geometry('550x300')
 root.config(bg='#1f1f1f')
 
 # Create a label to display the money earned
@@ -97,7 +97,7 @@ label_machine.place(x=85, y=135)
 
 # Button to double as a human
 bid_button = tk.Button(root, text="Doble!", height= 2, width=15,bg='orange', fg='white', bd=6, command=bid)
-bid_button.place(x=250, y=200)
+bid_button.place(x=265, y=200)
 
 # Create label for the image of the bid icon
 bid_icon = Image.open("bid.png")
@@ -105,12 +105,12 @@ bid_icon = bid_icon.resize((50, 50), Image.Resampling.LANCZOS)
 bid_tk = ImageTk.PhotoImage(bid_icon)
 bid_label = tk.Label(image=bid_tk, bg='#1f1f1f')
 bid_label.image = machine_tk
-bid_label.place(x=285, y=135)
+bid_label.place(x=295, y=135)
 
 
 # Button to stick as a human
 stick_button = tk.Button(root, text="Quedarse", height= 2, width=15,bg='green', fg='white', bd=6, command=stick)
-stick_button.place(x=375, y=200)
+stick_button.place(x=400, y=200)
 
 # Create label for the image of the sitck icon
 stick_icon = Image.open("stick.png")
@@ -118,7 +118,7 @@ stick_icon = stick_icon.resize((50, 50), Image.Resampling.LANCZOS)
 stick_tk = ImageTk.PhotoImage(stick_icon)
 stick_label = tk.Label(image=stick_tk, bg='#1f1f1f')
 stick_label.image = stick_tk
-stick_label.place(x=400, y=135)
+stick_label.place(x=420, y=135)
 
 # Button to reset everything
 reset_button = tk.Button(root, text="Reset", height= 2, width=15,bg='red', fg='white', bd=6, command=reset)

@@ -1,3 +1,4 @@
+# Make essential imports
 import tkinter as tk
 from PIL import Image, ImageTk
 from agent import agent
@@ -10,6 +11,7 @@ root = tk.Tk()
 root.title("Doble o nada!")
 root.geometry('550x300')
 root.config(bg='#1f1f1f')
+root.resizable(False, False)
 
 # Create a label to display the money earned
 earn_label = tk.Label(root, text="Dinero ganado: $0", fg='white', bg='#1f1f1f', font=('Times 14'), height=15)
@@ -88,7 +90,7 @@ agent_button = tk.Button(root, text="IA", height= 2, width=15, bg='black', fg='w
 agent_button.place(x=50, y=200)
 
 # Create label for the image of the machine
-machine = Image.open("machine.png")
+machine = Image.open("./resources/machine.png")
 machine = machine.resize((50, 50), Image.Resampling.LANCZOS)
 machine_tk = ImageTk.PhotoImage(machine)
 label_machine = tk.Label(image=machine_tk, bg='#1f1f1f')
@@ -100,7 +102,7 @@ bid_button = tk.Button(root, text="Doble!", height= 2, width=15,bg='orange', fg=
 bid_button.place(x=265, y=200)
 
 # Create label for the image of the bid icon
-bid_icon = Image.open("bid.png")
+bid_icon = Image.open("./resources/bid.png")
 bid_icon = bid_icon.resize((50, 50), Image.Resampling.LANCZOS)
 bid_tk = ImageTk.PhotoImage(bid_icon)
 bid_label = tk.Label(image=bid_tk, bg='#1f1f1f')
@@ -113,7 +115,7 @@ stick_button = tk.Button(root, text="Quedarse", height= 2, width=15,bg='green', 
 stick_button.place(x=400, y=200)
 
 # Create label for the image of the sitck icon
-stick_icon = Image.open("stick.png")
+stick_icon = Image.open("./resources/stick.png")
 stick_icon = stick_icon.resize((50, 50), Image.Resampling.LANCZOS)
 stick_tk = ImageTk.PhotoImage(stick_icon)
 stick_label = tk.Label(image=stick_tk, bg='#1f1f1f')
